@@ -1,0 +1,108 @@
+<!-- For filler and reference only-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improved Pokemon GO Webstore</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header, main, footer {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="[Image of Pokemon GO logo]" alt="Pokemon GO Logo">
+    <h1>Improved Pokemon GO Webstore</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#store">Store</a>
+    <a href="#cart">Cart</a>
+    <a href="#profile">Profile</a>
+    <a href="#" class="logout hidden">Logout</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <p>Welcome to the improved Pokemon GO webstore! Here you can find all your training essentials and manage your account.</p>
+      <button>Registration</button>
+      <button>Login</button>
+      <button>About Us</button>
+    </section>
+
+    <section id="registration">
+      <h2>Registration</h2>
+      <form id="registration-form">
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8">
+        <br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8">
+        <br>
+        <label for="playerID">Player ID: (Generated Automatically)</label>
+        <input type="text" id="playerID" name="playerID" disabled>
+        <br>
+        <label for="ign">In-Game Name (IGN):</label>
+        <input type="text" id="ign" name="ign" required>
+        <br>
+        <button type="submit" disabled>Submit</button>
+      </form>
+    </section>
+
+    <section id="store">
+      <h2>Store</h2>
+      <p>Store content is not available in this educational version.</p>
+    </section>
+
+    <section id="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items">
+        </ul>
+      <p id="cart-total">Total: $0.00</p>
+      <button id="checkout" disabled>Checkout</button>
+    </section>
+
+    <section id="payment">
+      <h2>Payment Confirmation</h2>
+      <p>Order details:</p>
+      <ul id="order-details">
+        </ul>
+      <p>Selected payment method: (Simulated, no actual processing)</p>
+      <button id="confirm-order" disabled>Confirm Order</button>
+      <button id="cancel-order">Cancel Order</button>
+    </section>
+
+    <section id="transaction-history">
+      <p>Transaction history is not available in this educational version.</p>
+    </section>
+
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>Email address: <span id="profile-email"></span></p>
+      <p>IGN: <span id="profile-ign"></span></p>
+      <p>Player ID: <span id="profile-id"></span></p>
+      <button id="logout">Log Out</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Disclaimer: All images used are owned by Niantic and this project is "for educational purposes only and no copyright infringement is intended."</p>
+    <p>Group name: (Replace with your group name)</p>
+  </footer>
