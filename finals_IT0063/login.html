@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
+    <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Common style for background image */
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body class="bg-light" id="body">
     <header class="bg-dark text-white text-center py-3">
-        <img src="Pokemon GO.png" alt="Pokemon GO" class="img-fluid" style="max-width: 100px;">
+        <img src="Pokemon GO.png" alt="Pokemon GO Logo" class="img-fluid" style="max-width: 100px;">
         <h1>Pokemon GO x Slaynergy</h1>
     </header>
 
     <div class="container mt-4">
-        <form id="loginForm" onsubmit="validateForm(event)" class="bg-white p-4 rounded shadow">
+        <form id="loginForm" onsubmit="validateLoginForm(event)" class="bg-white p-4 rounded shadow">
             <div class="form-group">
                 <label for="email">Email address or Username:</label>
                 <input type="email" id="email" name="email" class="form-control" required>
@@ -33,7 +43,21 @@
     <footer class="bg-dark text-white text-center py-3 mt-4">
         FOR EDUCATIONAL PURPOSES ONLY
     </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
+    <script>
+        // Get current hour in Philippine timezone
+        const currentHour = new Date().getUTCHours() + 8; // UTC+8 for Philippine timezone
+        // Set background image based on time
+        const body = document.getElementById('body');
+        if (currentHour >= 6 && currentHour < 18) {
+            body.style.backgroundImage = "url('Poke_Day.jpg_large')";
+        } else {
+            body.style.backgroundImage = "url('Poke_Night.jpg_large')";
+        }
+    </script>
 </body>
 </html>

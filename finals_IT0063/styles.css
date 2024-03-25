@@ -61,3 +61,12 @@ form.bg-white {
     margin: 20px;
 }
 
+.logo {
+    max-width: 100px;
+    margin-top: 10px; /* Adjust margin-top as needed */
+}
+
+.py-2 {
+    padding-top: 10px !important; /* Adjust as needed */
+    padding-bottom: 10px !important; /* Adjust as needed */
+}
